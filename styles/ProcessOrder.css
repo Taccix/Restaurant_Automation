@@ -1,0 +1,116 @@
+
+body{
+	
+	background-color: gray;
+}
+li{
+	float: left;
+}
+li a {
+	
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+	
+	
+}
+li a:hover{
+	
+	background-color: #111111;
+	
+}
+
+ul{
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+	
+	top: 100px;
+}
+.Process_Order{
+	position: absolute;
+	background-color: lightblue;
+	padding: 10px 30px;
+	top: 700px;
+	left: 597px;
+	
+}
+
+.Table_Number{
+	
+	position: absolute;
+	padding: 10px 30px;
+	top: 100px;
+	left: 580px;
+	
+}
+.Table{
+	position: absolute;
+	font: 14;
+	top: 80px;
+	left: 630px;
+	
+}
+.Food{
+	position: absolute;
+	font: 14;
+	top: 310px;
+	left: 380px;
+	
+	
+}
+
+.Drinks{
+	position: absolute;
+	font: 14;
+	top: 310px;
+	left: 900px;
+	
+	
+}
+
+.Food_Table{
+	position: absolute;
+	top: 370px;
+	left: 380px;
+	
+	
+}
+
+.Drinks_Table{
+	position: absolute;
+	
+	top: 270px;
+	left: 900px;
+	
+}
+
+.FoodLabel{
+	position: absolute;
+	
+	top: 350px;
+	
+	left: 300px;
+	
+	
+	
+}
+
+.DrinksLabel{
+	position: absolute;
+	
+	top: 350px;
+	
+	left: 850px;
+	
+	
+	
+	
+	
+	
+}
