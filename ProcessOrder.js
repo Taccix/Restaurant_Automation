@@ -1,21 +1,20 @@
 var async = require('async');
 var thing = require("lodash");
 
+const express = require("express");
+
+const app = express();
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://Taccix:montclair@cluster0-ofqeg.mongodb.net/test',  { useNewUrlParser: true }, () => 
+
+console.log("Connected to Database")
 
 
-
-
-
-//Connecting to the Database
-const MongoClient = require('mongodb').MongoClient;
-MongoClient.connect("mongodb://localhost:27017/mydb", function(err, db){
-//const uri = "mongodb://localhost:27017/mydb";
-
-
+);
 //Queue Code
 var QueueArr = thing.times(6, thing.uniqueId.bind(null, "Table"));
-var Queue = async.queue(function(item, callback){
-	console.log("Performing " + item.name);
+var Queue = async.queue(function(tablestatus, callback){
+	console.log("Performing " + tablestatus);
 	console.log("Waiting to be Processed " + Queue.length());
 	
 	
@@ -30,13 +29,11 @@ Queue.drain = function(){
 	console.log("All Items were processed!");
 };
 
-thing.each(QueueArr, function(item){
-	Queue.push({name:item}, function(err){
+thing.each(QueueArr, function(tablestatus){
+	Queue.push({name:tablestatus}, function(err){
 		
 		if(err){
 			console.log(err);
 		}
 	});
-});
-
 });

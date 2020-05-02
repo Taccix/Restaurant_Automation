@@ -30,13 +30,16 @@
 
 </select>
 
-<table id = "FoodLabel" class = "FoodLabel">
+<section class = "FoodLabel" id = "FoodLabel">
+<div>
 
-<tr>
+<article class = "items">
+<div> Tableid: {{ this.tableid }} </div>
 
-</tr>
-</table>
-
+</article>
+{{/each}}
+</div>
+</section>
 
 <table id = "DrinksLabel" class = "DrinksLabel">
 
@@ -46,8 +49,12 @@
 </tr>
 
 </table>
-<button class = "Process_Order" id = "Process_Order">Place Order</button>
 
+<form action = "/Get_Data" method = "post">
+<button class = "Process_Order" id = "Process_Order"> Place Order</button>
 
+</form>
+
+<script type = "text/javascript" src = "routers\routers.js"></script>
 </body>
 </html>
